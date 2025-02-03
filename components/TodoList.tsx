@@ -46,7 +46,7 @@ export default function TodoList({ initialTodos }: { initialTodos: Todo[] }) {
       });
       const updatedTodo = await response.json();
       setTodos(todos.map((todo) => (todo.id === id ? updatedTodo : todo)));
-      toast.success("Todo updated successfully!");
+      toast.success("Todo completed successfully!");
     } catch (error) {
       toast.error("Failed to update todo");
     }
